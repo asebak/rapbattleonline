@@ -1,0 +1,64 @@
+﻿.sapUiCrslHorizontal .sapUiCrslNextBtn:hover {
+    background: -webkit-linear-gradient(top, #359ed3 0, #57a0e6 10%, #3b9ad9 47%, #73afe9 85%, #73afe9 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+.sapUiCrslHorizontal .sapUiCrslPrevBtn:hover {
+    background: -webkit-linear-gradient(top, #359ed3 0, #57a0e6 10%, #3b9ad9 47%, #73afe9 85%, #73afe9 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+.sapUiCrslVertical .sapUiCrslPrevBtn:hover {
+    background: -webkit-linear-gradient(top, #359ed3 0, #57a0e6 10%, #3b9ad9 47%, #73afe9 85%, #73afe9 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+.sapUiCrslVertical .sapUiCrslNextBtn:hover {
+    background: -webkit-linear-gradient(top, #359ed3 0, #57a0e6 10%, #3b9ad9 47%, #73afe9 85%, #73afe9 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    height: inherit !important;
+    width: inherit !important;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    height: inherit !important;
+    width: inherit !important;
+}
+
+#rndprofiles li {
+    margin-left: 75px !important;
+    margin-right: 75px !important;
+}
+#featprofile li {
+      margin-left: 75px !important;
+    margin-right: 75px !important;  
+}
+
+#rndhoods li {
+    height: 260px !important;
+    margin-bottom: 200px !important;
+    width: 500px !important;
+}
+
+#rndhoods ul { width: 1000px !important; }
+
+#rndhoods { overflow: visible !important; }
+
+
+#newWrittenBattles , #newAudioBattles, #voteprogressWrittenBattles, #voteProgressAudioBattles, #feattracks, #activeTournaments
+{ height: 200px !important; }
+
+#newWrittenBattles ul, #newAudioBattles ul, #voteprogressWrittenBattles ul, #voteProgressAudioBattles ul, #feattracks ul, #activeTournaments ul{
+     overflow: visible !important;
+}
+
+    #newWrittenBattles li, #newAudioBattles li, #voteprogressWrittenBattles li, #voteProgressAudioBattles li, #feattracks li, #activeTournaments li{
+        height: 120px !important;
+        width: 373px !important;
+        margin-right: 50px !important;
+        margin-top: 18px !important;
+    }
+

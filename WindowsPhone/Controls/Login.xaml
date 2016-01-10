@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="FreestyleOnline___WP.Controls.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="25,0,-1,0">
+            <Grid.Background>
+                <ImageBrush Opacity="0.1" ImageSource="/Assets/RapBattleOnline.png" />
+            </Grid.Background>
+            <PasswordBox Name="PasswordText" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top"
+                         Width="446" Password="password" Tap="PasswordText_Tap" />
+            <TextBlock Text="{Binding Path=LocalizedResources.Username, Source={StaticResource LocalizedStrings}}"
+                       HorizontalAlignment="Left" Margin="10,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBlock Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}"
+                       HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                       RenderTransformOrigin="0.551,5.925" />
+            <Button Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="0,308,0,0" VerticalAlignment="Top" Width="187"
+                    Click="Login_Click" Background="#FF999999" BorderBrush="#DEFFFFFF" />
+            <TextBlock HorizontalAlignment="Left" Margin="0,21,0,0" TextWrapping="Wrap"
+                       Text="{Binding LocalizedResources.SignIn, Source={StaticResource LocalizedStrings}}"
+                       VerticalAlignment="Top" FontSize="40" />
+            <HyperlinkButton Style="{StaticResource HLB}" Click="ForgotPwd_Click" HorizontalAlignment="Left"
+                             Margin="3,380,0,0"
+                             Content="{Binding LocalizedResources.CantAccess, Source={StaticResource LocalizedStrings}}"
+                             VerticalAlignment="Top" Foreground="#DE114F7A" />
+            <TextBlock HorizontalAlignment="Left" Margin="17,443,0,0" TextWrapping="Wrap"
+                       Text="{Binding LocalizedResources.NoAccount, Source={StaticResource LocalizedStrings}}"
+                       VerticalAlignment="Top" />
+            <HyperlinkButton Style="{StaticResource HLB}" Click="Register_Click"
+                             Content="{Binding LocalizedResources.SignUp, Source={StaticResource LocalizedStrings}}"
+                             HorizontalAlignment="Left" Margin="184,448,0,0" VerticalAlignment="Top"
+                             Foreground="#DE114F7A" />
+
+        </Grid>
+        <TextBox Name="UserNameText" HorizontalAlignment="Left" Height="72" Margin="25,146,0,0" Grid.Row="1"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="445" />
+    </Grid>
+</UserControl>

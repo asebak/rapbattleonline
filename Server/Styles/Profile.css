@@ -1,0 +1,127 @@
+﻿#profile { position: relative !important; }
+
+.profilepanel { position: absolute !important; }
+
+.musicPlayerProfile { width: 50% !important; }
+
+.sapUiUx3TVFacetThingGroup { width: 100%; }
+
+.sapUiUx3TV { min-height: 580px; }
+
+#userCommentsRepeater .sapUiMltPadRight {
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.audioplayer { margin-left: 0px !important; }
+
+.sapUiRrDesignStandard > .sapUiRrPtb { background-color: #b3d3e7; }
+
+.sapUiRrDesignStandard > .sapUiRrFtr { background-color: #b3d3e7; }
+
+.sapUiUx3NavBarArrow { border-color: #000000 transparent #b3d3e7; }
+
+.sapUiUx3NavBar { border-bottom: 2px solid #b3d3e7; }
+
+.sapUiUx3TVContent { border: 1px solid #81A1B5; }
+
+.sapUiUx3TVHRWhite {
+    background-color: #81A1B5;
+    height: 1px;
+}
+
+.sapUiUx3TVToolbar { border-top: 1px solid #81A1B5; }
+
+.sapUiUx3TVFacets { border-left: 1px solid #81A1B5; }
+
+.sapUiUx3NavBarItem { color: #81A1B5; }
+
+.sapUiRrDesignStandard .sapUiRrTitle { font-size: 18px; }
+
+.sapUiDlg { background-color: #95bfdb !important; }
+
+.sapUiDlgHdr { background-image: url("") !important; }
+
+.sapUiDlgCont { background-color: #b3d3e7 !important; }
+
+.sapUiDlgFooter { background-color: #b3d3e7 !important; }
+
+.sapUiMlt a:link, a:visited {
+    color: #b3d3e7 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.sapUiMlt a:hover {
+    color: #81A1B5 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.sapUiMlt a:active {
+    color: #b3d3e7 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.profileButton {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #dfeaf2;
+    border: solid 1px #a0a0a0;
+    border-radius: 3px;
+    color: #555555;
+    display: block;
+    font-family: Arial;
+    /*float: left;*/
+    font-size: 10px;
+    font-weight: bold;
+    margin: 2px 0px 2px 2px;
+    padding-right: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width:100%
+}
+
+.profileButton img {
+    padding: 0px 4px 0px 0px;
+    vertical-align: top;
+}
+
+.profileButton:hover {
+    background-color: #c7deee;
+    color: #105cc9;
+    text-decoration: none;
+}
+
+.profileButton:active {
+    background-position: bottom right;
+    outline: none;
+}
+
+.profileButton:active img { padding: 0px 4px 0px 0px; }
+
+.profileButton:active span {
+    background-position: bottom left;
+    padding: 3px 6px 1px 8px;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

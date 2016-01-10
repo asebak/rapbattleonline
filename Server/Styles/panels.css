@@ -1,0 +1,44 @@
+﻿.panel-danger > .panel-heading
+{
+    background-color: #e74c3c !important;
+    border-color: #e74c3c !important;
+}
+
+.panel-danger
+{
+    border-color: #e74c3c !important;
+}
+
+.panel-success > .panel-heading
+{
+    background-color: #2ecc71 !important;
+    border-color: #2ecc71 !important;
+}
+
+.panel-success
+{
+    border-color: #2ecc71 !important;
+}
+
+.panel-default
+{
+    border-color: #95a5a6 !important;
+}
+
+.panel-default > .panel-heading
+{
+    background-color: #95a5a6 !important;
+    border-color: #95a5a6 !important;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}

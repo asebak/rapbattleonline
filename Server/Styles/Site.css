@@ -1,0 +1,459 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+   /*html, body {
+            height: 100%;
+        }
+        footer {
+            color: white;
+            background: #3e4753;
+            padding: 17px 0 18px 0;
+            border-top: 1px solid #585f69;
+        }
+        footer a {
+            color: #999;
+        }
+        footer a:hover {
+            color: #efefef;
+        }
+        .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -63px;
+        }
+        .push {
+            height: 63px;
+        }
+        .wrapper > .container {
+            padding-top: 60px;
+        }*/
+   .row.borders{
+    display: inline-flex !important;
+    width: 100% !important;
+}
+[Hidden] , template {
+    display: block !important; 
+}
+
+html, body {
+  height: 100%;
+}
+
+.pole-content-holder > #pole-heading {
+    z-index: 1001;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+.main {
+  /*overflow:auto;*/
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -100px; /* negative value of footer height */
+  height: 100px;
+  clear:both;
+  padding-top:20px;
+  color: white;
+  background: #3e4753;
+   border-top: 1px solid #585f69;
+} 
+
+body {
+    background: #fff !important;
+    color: #696969;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    font-size: .80em;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link, a:visited {
+    color: #97bfd8 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.UnreadInboxMain {
+    -webkit-border-radius: 0.4em;
+    -webkit-box-shadow: 1px 1px 1px gray;
+    background-color: #3386c2;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 1px gray;
+    color: white !important;
+    font-size: 0.9em !important;
+    font-weight: bold !important;
+    height: 20px;
+    margin-left: 2px;
+    padding: 2px 9px 4px 8px;
+}
+
+a:hover {
+    color: #81A1B5 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+a:active {
+    color: #97bfd8 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+p {
+    line-height: 1.6em;
+    margin-bottom: 10px;
+}
+
+ul.topnav {
+    background-color: white;
+    float: right;
+    font-size: 1.2em;
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    /*border-top: 1px solid #96a8c3;
+    border-left: 1px solid #96a8c3;
+    border-right: 1px solid #96a8c3;*/
+}
+
+ul.topnav li {
+    float: left;
+    font-size: 11px;
+    margin: 0;
+    padding: 0 25px 0 0;
+    position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+
+ul.topnav li ul.subnav {
+    background-color: white;
+    border-bottom: 1px solid #96a8c3;
+    border-left: 1px solid #96a8c3;
+    border-right: 1px solid #96a8c3;
+    display: none;
+    float: left;
+    left: -21px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 13px;
+    width: 200px;
+}
+
+ul.topnav li ul.subnav li {
+    clear: both;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    color: #666666;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-weight: 200;
+    margin-bottom: 0px;
+    text-transform: none;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 { font-size: 1.2em; }
+
+h4 { font-size: 1.1em; }
+
+h5, h6 { font-size: 1em; }
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 { margin-top: 0px; }
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    background-color: #fff !important;
+    margin: 20px auto 0px auto;
+    width: 1200px;
+    /*border: 1px solid #496077;*/
+}
+
+.header {
+    /*position: relative;*/
+    /*margin: 0px;
+    padding: 0px;*/
+    background: #b3d3e7;
+    width: 100%;
+    /*margin-top: 3%;*/
+}
+
+.header h1 {
+    border: none;
+    color: #000;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 2em;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+}
+
+.main {
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+    padding: 0px 12px;
+}
+
+.leftCol {
+    margin: 12px 8px 8px 8px;
+    min-height: 200px;
+    padding: 6px 0px;
+    width: 200px;
+}
+
+/*.footer {
+    color: #4e5766;
+    line-height: normal;
+    margin: 0px auto;
+    padding: 8px 0px 0px 0px;
+    text-align: center;
+    width: 50%;
+}*/
+
+
+.CopyrightLabel {
+    float: right;
+    font-size: x-small;
+}
+
+.SoftwareversionLabel {
+    float: left;
+    font-size: x-small;
+}
+
+.ExceptionLabel {
+    color: red;
+    font-size: x-small;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+    background-color: #2a4985;
+    width: 100%;
+}
+
+div.menu { padding: 4px 0px 4px 8px; }
+
+div.menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited {
+    background-color: #446bb8;
+    border: 1px #000 solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover {
+    background-color: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+
+div.menu ul li a:active {
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 1em;
+}
+
+fieldset p { margin: 2px 12px 10px 10px; }
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label { display: block; }
+
+fieldset label.inline { display: inline; }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    border: 1px solid #ccc;
+    width: 320px;
+}
+
+input.passwordEntry {
+    border: 1px solid #ccc;
+    width: 320px;
+}
+
+div.accountInfo { width: 42%; }
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear { clear: both; }
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+/*LOGIN STARTS*/
+
+.loginDisplay {
+    color: black;
+    display: block;
+    font-size: 1.1em;
+    /*left: -15%;*/
+    padding: 10px;
+    position: relative;
+    text-align: right;
+    /*margin-left: 16%;*/
+    /*margin-right: 14%;*/
+}
+
+.loginDisplay p { color: #81A1B5 !important; }
+
+.loginDisplay a:link {
+    color: #b3d3e7 !important;
+    font-size: x-small !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+#TotalOnlineUsers {
+    color: #b3d3e7 !important;
+    font-size: x-small !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.loginDisplay a:visited {
+    color: #b3d3e7 !important;
+    font-size: x-small !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.loginDisplay a:hover {
+    color: #81A1B5 !important;
+    /*font-size: x-small !important;*/
+    /*font-weight: bold !important;*/
+    text-decoration: none !important;
+}
+
+.darkerButton {
+    background: -webkit-linear-gradient(top, #398fd8 0, #57a0e6 10%, #76a0ee 47%, #9ebdf5 85%, #99beff 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+.darkerButton:hover {
+    background: -webkit-linear-gradient(top, #398fd8 0, #57a0e6 10%, #76a0ee 47%, #bad0f6 85%, #dae5f8 90%) !important;
+    box-shadow: inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff, inset 0px 0 0 0 #cad9e9, inset 0px 0 0 0 #ffffff !important;
+}
+
+/*LOGIN ENDS*/
+
+.failureNotification {
+    color: Red;
+    font-size: 1.2em;
+}
+
+.bold { font-weight: bold; }
+
+.submitButton {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.yafWhatsNew { width: 500px; }
+
+.yafWhatsNew .header1,
+.yafWhatsNew .header2 { display: none; }
+
+.yafWhatsNew .activeDiscussionContent .post {
+    text-align: left !important;
+    width: 400px;
+}
+
+.sapUiDlg { background-color: #95bfdb !important; }
+
+.sapUiDlgHdr { background-image: url("") !important; }
+
+.sapUiDlgCont { background-color: #b3d3e7 !important; }
+
+.sapUiDlgFooter { background-color: #b3d3e7 !important; }
+
+/*.x-panel-header-default { background-color: #b3d3e7 !important; }*/
+
+.x-panel-header-default .x-tool-img {
+    background-color: #b3d3e7 !important;
+    opacity: 0.7 !important;
+}
+
+.x-tool-over .x-tool-img { opacity: 1 !important; }
+
+.x-mask-msg-text {
+    background-image: url("/icons/Busy.gif") !important;
+    background-size: 16px 16px !important;
+}
+
+/*.x-border-layout-ct {
+    background-color: #99c5e0 !important
+}*/
+
+.requiredField {
+    color: #3892d3;
+    font-size: 22px;
+}
+
+
+
+
+
+
+

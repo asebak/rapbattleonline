@@ -1,0 +1,105 @@
+﻿.commentsBoxTitle
+{
+    color: #b3d3e7 !important;
+    font-size: large !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+a.commentsBoxTitle
+{
+    color: #b3d3e7;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    a.commentsBoxTitle:hover
+    {
+        color: #81A1B5;
+        font-size: large;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+.commentsBoxUser
+{
+    color: #b3d3e7;
+    font-size: small;
+}
+
+.commentsBoxDate
+{
+    color: darkgray;
+    font-size: x-small;
+}
+
+.commentsBoxComment
+{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+#ContentHolder
+{
+    margin-top: -11px;
+    opacity: 0.8;
+    overflow: hidden;
+    width: 580px;
+    word-wrap: break-word;
+}
+
+.HeaderControl
+{
+    color: #81A1B5;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+#TitleLabelContactUs
+{
+    margin-right: 30px !important;
+}
+
+#ContentLabelContactUs
+{
+    margin-right: 6px !important;
+}
+
+.editable
+{
+    font: 14px Tahoma;
+    padding: 3px 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.editableBlock .x-label-value
+{
+    display: block;
+}
+
+.editable-over
+{
+    background-color: #ffc;
+}
+
+.x-form-field-editor
+{
+    font: 12px Tahoma;
+}
+
+.formattedLabel {
+    width: 100%; 
+    word-break: break-all;
+}
+.panel-title {
+    color: white !important;
+}
+
+.whiteText {
+    color: white !important;
+}

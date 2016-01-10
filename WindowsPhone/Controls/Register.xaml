@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="FreestyleOnline___WP.Controls.Register"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Opacity="0.1" ImageSource="/Assets/RapBattleOnline.png" />
+        </Grid.Background>
+        <Button Name="RegisterBtn" Content="Register" HorizontalAlignment="Left" Margin="10,332,0,0"
+                VerticalAlignment="Top" Width="184" Click="Register_Click" />
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="184"
+                Click="Back_Click" />
+        <TextBox Name="UserName" HorizontalAlignment="Left" Height="72" Margin="0,52,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="470" />
+        <TextBox Name="Email" HorizontalAlignment="Left" Height="72" Margin="0,255,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="470" />
+        <PasswordBox Name="Password" HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top"
+                     Width="470" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,20,0,0" TextWrapping="Wrap" Text="Username"
+                   VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="17,124,0,0" TextWrapping="Wrap" Text="Password"
+                   VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="17,228,0,0" TextWrapping="Wrap" Text="Email"
+                   VerticalAlignment="Top" />
+
+    </Grid>
+</UserControl>

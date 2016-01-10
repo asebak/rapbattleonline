@@ -1,0 +1,25 @@
+﻿.fulltextarea {
+    width: 100%;
+}
+
+.fulltextarea  .editable-container.editable-inline {
+        display: inline; 
+    }
+
+.fulltextarea    .editable-input {
+        display: inline; 
+    }
+
+.fulltextarea    .editableform .form-control {
+        width: 100%;
+    }
+
+.form-control:focus
+{
+   border-color: #bbb !important;
+box-shadow: 0 0 2px #c9c9c9  !important;
+}
+
+.disableResize {
+    resize: none;   
+}

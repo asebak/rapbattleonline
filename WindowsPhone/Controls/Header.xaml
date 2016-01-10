@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="FreestyleOnline___WP.Controls.Header"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             d:DesignHeight="150" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Image Name="ProfileImage" HorizontalAlignment="Left" Height="100" Margin="24,20,0,0" VerticalAlignment="Top"
+               Width="100">
+            <Image.Source>
+                <BitmapImage CreateOptions="DelayCreation,IgnoreImageCache" UriSource="{Binding AvatarImage}" />
+            </Image.Source>
+        </Image>
+        <TextBlock Text="{Binding UserName}" Margin="129,10,24,106" />
+        <Button Content="{Binding UnreadMessages}" Click="Messages_Click" Margin="132,51,32,71" RenderTransformOrigin="0.5,0.5" />
+    </Grid>
+</UserControl>

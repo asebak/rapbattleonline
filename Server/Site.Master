@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FreestyleOnline.SiteMaster" %>
+
+<%@ Import Namespace="FreestyleOnline.classes.Providers" %>
+<%@ Import Namespace="FreestyleOnline.classes.Types" %>
+<%@ Import Namespace="YAF.Types.Extensions" %>
+
+<%@ Register TagPrefix="RAP" TagName="LoginBoxMobile" Src="~/Mobile/Controls/LoginForm.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="MainMenu" Src="~/Controls/NavigationMenu.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="OnlineUsers" Src="~/Controls/RealTime/OnlineUsers.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="Notifications" Src="~/Controls/RealTime/Notifications.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="NotificationsPopUp" Src="~/Controls/NotificationsPopUp.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="FriendsList" Src="~/Controls/FriendsList.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="DialogBox" Src="~/Controls/Generic/RapDialogBox.ascx" %>
+<%@ Register TagPrefix="RAP" TagName="WorkItemReportForm" Src="~/Controls/WorkItemReportingForm.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Rap Battle Online: HipHop Just Got Serious</title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <ext:ResourceManager runat="server" Theme="Gray" />
+        <asp:ScriptManager runat="server" ID="YafScriptManager" EnablePartialRendering="true"></asp:ScriptManager>
+        <div class="loginDisplay">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-9 column">
+                        <img width="100%" height="100%" src="/images/RapBattleOnline.png" />
+                    </div>
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            <div class="col-md-3 column">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%=this.Text("COMMON", "COMMON_LOGIN") %>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body pagination-centered">
+                                        <RAP:LoginBoxMobile ID="LoginBoxMobile1" runat="server" />
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="pull-left" title="Login or Register With a Facebook Account">
+                                            <asp:PlaceHolder ID="FacebookHolder" runat="server" Visible="false">
+                                                <a id="FacebookLogin" runat="server" class="authLogin facebookLogin">
+                                                </a>
+                                            </asp:PlaceHolder>
+                                        </div>
+                                        <div class="pull-left" title="Login or Register With a Twitter Account">
+                                            <asp:PlaceHolder ID="TwitterHolder" runat="server" Visible="false">
+                                                <a id="TwitterLogin" runat="server" class="authLogin twitterLogin">
+                                                </a>
+                                            </asp:PlaceHolder>
+                                        </div>
+                                        <div class="pull-left" title="Login or Register With a Google Account">
+                                            <asp:PlaceHolder ID="GoogleHolder" runat="server" Visible="false">
+                                                <a id="GoogleLogin" runat="server" class="authLogin googleLogin">
+                                                </a>
+                                            </asp:PlaceHolder>
+                                        </div>
+                                        <%=this.Text("DEFAULT", "NOT_MEMBER") %> <a href="/forum/rules"><%=this.Text("COMMON", "COMMON_REGISTER") %></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <div class="col-md-6 column pull-right col-lg-4 vcenter">
+                                <% if (this.IsMobile)
+                                   {%>
+                                <%}
+                                   else
+                                   {%>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ImageUrl="/icons/settings.png" Width="16px" Height="16px" ToolTip='<%#this.Text("DEFAULT", "ADMIN") %>'
+                                         runat="server" ID="AdminLink" OnDirectClick="AdminLink_DirectClick" />
+                                </div>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ImageUrl="/icons/Users.png" Width="16px" Height="16px" runat="server"
+                                         ID="FriendsLink" ToolTip='<%#this.Text("DEFAULT", "FRIENDS")%>' OnDirectClick="FriendsLink_DirectClick" />
+                                </div>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ImageUrl="/icons/sendmail.png" Width="16px" Height="16px" runat="server"
+                                         ToolTip='<%#this.Text("DEFAULT", "INBOX") %>' ID="InboxLink" OnDirectClick="InboxLink_DirectClick" />
+                                </div>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ID="CpLink" ImageUrl="/forum/resources/icons/wrench.png" OnDirectClick="CpLink_DirectClick"
+                                         Width="16px" Height="16px" runat="server" ToolTip='<%#this.Text("DEFAULT", "CP") %>' />
+                                </div>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ID="HelpLink" ImageUrl="/icons/help.png" Width="16px" Height="16px" runat="server" 
+                                        ToolTip='<%#this.Text("DEFAULT", "HELP") %>' OnDirectClick="HelpLink_DirectClick" />
+                                </div>
+                                <div class="col-md-1 column">
+                                    <ext:ImageButton AutoDataBind="true" ImageUrl="/icons/error.png" ID="BugReportLink" Width="16px" Height="16px" runat="server"
+                                         ToolTip='<%#this.Text("DEFAULT", "BUG")%>' OnDirectClick="BugReportLink_DirectClick" />
+                                </div>
+                                <%}%>
+                                <ext:Label AutoDataBind="true" Cls="UnreadInboxMain" runat="server" ID="InboxSymbol">
+                                    <ToolTips>
+                                        <ext:ToolTip Html="Unread Messages" Target="#{InboxSymbol}" runat="server" />
+                                    </ToolTips>
+                                </ext:Label>
+                                <ext:Label AutoDataBind="true" runat="server" Text='<%#YafContext.Current.PageUserName %>' />
+                                | 
+                                            <asp:LoginStatus ClientIDMode="Static" ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Sign Out" LogoutPageUrl="~/" />
+                            </div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="row clearfix">
+                    <RAP:MainMenu ID="NavBar" runat="server" />
+                </div>
+                <div class="row clearfix">
+                    <asp:LoginView runat="server">
+                        <AnonymousTemplate>
+                            <div id="guestwarningmsg" class="alert alert-dismissable alert-danger" runat="server" visible='<%#!HttpContext.Current.Request.Url.OriginalString.Contains("forum")%>'>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <strong><%= this.Text("DEFAULT", "GUEST_RBO") %></strong>
+                            </div>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                </div>
+                <div class="row clearfix">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+            </div>
+
+
+        </div>
+        <div class="clear">
+        </div>
+        <RAP:Notifications runat="server" />
+        <RAP:NotificationsPopUp runat="server" />
+        <div id="wrap">
+            <div class="main container clear-top">
+            </div>
+        </div>
+        <div id="push">
+        </div>
+        <footer class="footer">
+              <%--  <div class="col-md-4 column pull-left">
+                   <h5>Supported Platforms/In Progress</h5>
+                    <div class="row clearfix">
+                            <ext:ImageButton ImageUrl="/icons/Android-icon.png" Width="30px" Height="30px" runat="server"/>--%>
+<%--                        <div class="col-md-1 column ">
+                            <ext:ImageButton ImageUrl="/icons/blackberry.gif" Width="30px" Height="30px" runat="server"/>
+                        </div>                                         
+                        <div class="col-md-1 column ">
+                            <ext:ImageButton ImageUrl="/icons/windows8.png" Width="30px" Height="30px" runat="server"/>
+                        </div>    --%>                                     
+<%--                            <ext:ImageButton ImageUrl="/icons/wp8.png" ToolTip="Windows Phone 8" Width="30px" Height="30px" runat="server"/>
+                    </div>
+                </div>--%>
+                <RAP:FriendsList ID="Friends" runat="server" />
+                <RAP:WorkItemReportForm ID="WorkItem" runat="server"/>
+                <RAP:DialogBox runat="server"/>
+                <div class="col-md-4 column pull-left">
+                  <div id="TotalOnlineUsers">
+                    <RAP:OnlineUsers runat="server" />
+                     </div>
+                </div>
+                <div class="col-md-4 column pull-right">
+                    <p><%= this.Text("DEFAULT", "VERSION").FormatWith(this.GetService<ApplicationProvider>().GetApplicationSettings("RAP.Version")) %></p>
+                    <p><%= this.Text("DEFAULT", "COPYRIGHTMSG").FormatWith("&copy", DateTime.Now.Year) %></p>  
+                </div>
+            </footer>
+    </form>
+</body>
+</html>

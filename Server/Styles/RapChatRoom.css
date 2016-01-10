@@ -1,0 +1,171 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    background-color: #d7e5e4;
+    border-bottom: #5f9482 solid 2px;
+    color: #1e4638;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.submitButton {
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.submitButton:hover { background-color: #e1e1e1; }
+
+.login {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 250px;
+    /*border: solid 2px #5f9482;
+    color: #1e4638;*/
+}
+
+.login .textBox { width: 240px; }
+
+
+.login #divButton {
+    padding: 4px;
+    text-align: right;
+}
+
+.chatRoom {
+    /*border: solid 1px #b3d3e7;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 650px;*/
+}
+
+.chatRoom .title {
+    background-color: #d7e5e4;
+    border-bottom: solid 1px #5f9482;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.chatRoom .content {
+    clear: both;
+    height: 300px;
+}
+
+.chatRoom .content .chatWindow {
+    border-right: solid 1px #b3d3e7;
+    float: left;
+    height: 100%;
+    overflow-y: scroll;
+    width: 70%
+}
+
+.chatRoom .content .chatWindow .message { padding: 4px;
+    word-break: break-all;
+}
+
+
+.chatRoom .content .chatWindow .message .userName { font-weight: bold; }
+
+.chatRoom .content .chatWindow .message .loginUserImage {
+    height: 25px;
+    margin-left: 5px;
+    width: 25px;
+}
+
+.chatRoom .content .users {
+
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.chatRoom .content .users .user {
+    background-color: #f9f9f9;
+    border-bottom: solid 1px #b3d3e7;
+    cursor: pointer;
+    display: block;
+    padding: 4px;
+}
+
+.chatRoom .content .users .loginUser {
+    border-bottom: solid 1px #b3d3e7;
+    color: gray;
+    display: block;
+    padding: 4px;
+}
+
+.chatRoom .content .users .loginUserImage {
+    height: 25px;
+    margin-left: 5px;
+    width: 25px;
+}
+
+.chatRoom .content .users .user:hover { background-color: #e7e7e7; }
+
+.chatRoom .messageBar {
+    border-top: solid 1px #b3d3e7;
+    padding: 4px;
+}
+
+.chatRoom .messageBar .textbox { width: 550px; }
+
+.disconnect {
+    background-color: #ffcbcb;
+    border: solid 1px red;
+    margin: 10px;
+    padding: 4px;
+    position: absolute;
+}
+
+.connect {
+    background-color: #91e09a;
+    border: solid 1px #30b748;
+    margin: 10px;
+    padding: 4px;
+    position: absolute;
+}
+
+
+.draggable {
+    border: #5f9482 solid 1px !important;
+    position: absolute;
+    width: 250px;
+}
+
+.draggable .header {
+    background-color: #d7e5e4;
+    border-bottom: #5f9482 solid 1px;
+    color: #1e4638;
+    cursor: move;
+}
+
+.draggable .selText {
+    color: black;
+    padding: 4px;
+}
+
+.draggable .messageArea {
+    border-bottom: #5f9482 solid 1px;
+    height: 200px;
+    overflow-y: scroll;
+    width: 250px;
+}
+
+.draggable .messageArea .message { padding: 4px; }
+
+.draggable .buttonBar {
+    padding: 4px;
+    width: 250px;
+}
+
+.draggable .buttonBar .msgText { width: 172px; }
+
+.draggable .buttonBar .button {
+    margin-left: 4px;
+    width: 55px;
+}

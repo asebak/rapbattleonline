@@ -1,0 +1,10 @@
+﻿.alert-danger
+{
+    background-color: #e74c3c !important;
+    border-color: #e74c3c !important;
+    color: white !important;
+}
+
+.alert-dismissable .close {
+       color: white !important; 
+}

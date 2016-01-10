@@ -1,0 +1,47 @@
+﻿/*Menu Bar SAPUI5 object*/
+/*#menuBar{
+color:#878383;
+border-color:#878383 !important;
+border-left:none !important;
+border-right:none !important;
+font-weight: bold !important;
+font-size:14px;
+}
+
+#menuBar ul li{
+margin-left:34px;
+}
+#menuBar ul li:hover{
+    background-color: transparent !important;;
+    text-decoration:none !important;;
+}*/
+#MainMenuNavigation ul li ul { list-style: none; }
+
+#MainMenuNavigation ul li { list-style: none; }
+
+#MenuASP {
+    border-bottom: 1px solid #96a8c3;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    width: 25%;
+}
+
+
+#MenuASP a { color: black; }
+
+.MenuOnHover {
+    border-left: 1px solid #96a8c3;
+    border-right: 1px solid #96a8c3;
+    border-top: 1px solid #96a8c3;
+}
+
+#MainMenuNavigation ul li ul {
+    border-left: 1px solid #96a8c3;
+    border-right: 1px solid #96a8c3;
+    border-top: 1px solid #96a8c3;
+}
+
+.horizontal-menu .x-menu-item-link { line-height: 20px; }
+
+.horizontal-menu .x-menu-item-arrow { display: none; }

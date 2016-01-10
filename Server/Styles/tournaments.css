@@ -1,0 +1,20 @@
+﻿.team a:link
+{
+    color: white !important;
+}
+
+
+.team a:visited
+{
+    color: white !important;
+}
+
+.winner a:link
+{
+    color: white !important;
+}
+
+.winner a:visited
+{
+    color: white !important;
+}
