@@ -1,21 +1,48 @@
-# rapbattleonline
-Rap Battle Online: HipHop Just Got Serious
+#Rap Battle Online: HipHop Just Got Serious
+
+Contains the Following code:
+- Backend Server implementation done using ASP.net and C# 4.5
+- Front End implementation using various HTML5 Libraries using SAP UI5, KnockoutJS, SignalR, WebRTC
+- Android Client App
+- Silverlight Client App
+- Windows Phone Client App
+
+FEATURES
+- Audio Rap Battles.
+- Written Rap Battles.
+- News Commenting/Posting.
+- Ability to create and join Hoods.
+- Ability to add your own music tracks.
+- Rating system
+- Rap Tournaments
+- Leaderboards and stats.
+- Real-Time notification system.
+
+REQUIREMENTS
+
+- Visual Studio 2012/2013
+- SQL Server database (local instance can be used)
+- Microsoft Code Contracts
+- Silverlight SDK
+- Windows Phone SDK
+- Android SDK
+- Android Studio
 
 DATABASE
 
-- Database setup is in db.config file, need to hook up rapbattleonline.com database when application is completed
+- Database setup is in db.config file.
 - In App_data folder there is an empty db file that you can replace with so you can reinstall the application.
 - To query from a database easily. hook an SqlDataSource Control from the tool box to the databound item such as a repeater, gridview etc.
-- When creating a table make it a  in the .SQL files Write all queries in the custom.sql file
+- When creating a table make it a in the .SQL files Write all queries in the custom.sql file
 
 
 CONTROLS
 
 - To make a custom control, just add a web user control to the controls folder
-- C# file inherits from BaseUserControl no the System.web.controls.ui one
+- C# file inherits from BaseUserControl not the System.web.controls.ui one
 - ASPX file is fine, no adjustments need to be made.
-- All controls need a variable public int UserID { get; set;}
-- Control must validate with this.pagecontext.pageuserid
+- All controls need a variable public int UserID { get; set;} to easily get user context
+- Control must validate with this.PageContext.PageUserId
 
 
 PAGES
@@ -24,20 +51,19 @@ PAGES
 - C# inherit from ForumPage or ForumPageRegistered (if inside a profile)
 - Add page to the enum ForumPages, recompile the yaf solution with the new DLLs (about 8 or 9 dependant dlls)
 
-Audio Application
-- Do it in silverlight first,then potentially port it to flash.
 
 Timer Control
 
 - Invoked by calling writing this method on the page
 
+```
 protected override void OnPreRender(EventArgs e)
 {
             ObjectID.TimeToEnd = new DateTime(Year, Month, Day); [this works perfectly]
 			OR
 			ObjectID.TimeToEnd = new DateTime.addHours(1.02); [issues with this]
 }
-
+```
 CSS3:
 Get the ID defined in the sapui5 js code
 to override the library use the flag !important
@@ -56,7 +82,6 @@ CODE REFACTORING:
 - Make more reusable code(battlevotedisplay)
 - Inject javascript code behind as minimized
 - Optimize performance for HTML output rendering
-- 
 
 Debugging Mobile Device with ASP.NET
 - open folder in my documents iisexpress/config/apphost.config
